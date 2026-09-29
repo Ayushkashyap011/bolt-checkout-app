@@ -133,10 +133,6 @@ REST_FRAMEWORK = {
     ],
 }
 
-# CORS Configuration
-CORS_ALLOWED_ORIGINS = os.environ.get(
-    'CORS_ALLOWED_ORIGINS',
-    'http://localhost:5173,http://localhost:5174,http://localhost:3000,https://bolt-checkout-app-frontend.vercel.app'
-).split(',')
-CORS_ALLOW_ALL_ORIGINS = DEBUG  # Only allow all in development
+# CORS Configuration — Allow all origins for assessment demo
+CORS_ALLOW_ALL_ORIGINS = True
 CORS_ALLOW_CREDENTIALS = True
